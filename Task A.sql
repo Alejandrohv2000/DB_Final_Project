@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS restaurant_db;
-CREATE DATABASE restaurant_db;
+CREATE DATABASE restaurant_DB;
 USE restaurant_db;
 SHOW TABLES;
 
