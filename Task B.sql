@@ -8,7 +8,7 @@ INSERT INTO categories (name, description) VALUES
 ('Drinks', 'Sodas, water, juices')
 ON DUPLICATE KEY UPDATE name = name; 
 
--- Inventory (for triggers/tests)
+-- Inventory
 INSERT INTO inventory_items (name, unit, current_quantity, reorder_level) VALUES
 ('Flour (kg)', 'kg', 100.00, 10.00),
 ('Tomato sauce (L)', 'L', 50.00, 5.00),
@@ -107,6 +107,8 @@ VALUES (
   (SELECT employee_id FROM employees WHERE first_name = 'Bob' AND last_name = 'Smith' LIMIT 1),
   'DELIVERY', 'CARD', 0.00
 );
+INSERT INTO orders (customer_id, cashier_id, order_type, payment_method, total_amount)
+VALUES (2, 2, 'DELIVERY', 'CARD', 25.00);
 
 SET @new_order_id = LAST_INSERT_ID();
 

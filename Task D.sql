@@ -75,6 +75,9 @@ DELIMITER ;
 -- CALL assign_driver(1, 1);
 -- SELECT * FROM deliveries WHERE order_id = 1;
 
+CALL assign_driver(1, 1);
+
+
 -- 3) Stored Procedure: Generate Daily Sales Report
 -- Purpose: Summarize sales (count, total revenue) for a given date
 -- Parameters: p_report_date (DATE) - defaults to today if NULL

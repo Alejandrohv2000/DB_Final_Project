@@ -1,5 +1,6 @@
 DROP DATABASE db;
-
 USE restaurant_db;
 
+SHOW DATABASES;
 
+SHOW TABLES;
